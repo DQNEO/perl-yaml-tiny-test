@@ -1,8 +1,10 @@
 #!/usr/bin/env perl
 
+use strict;
+use warnings;
 use YAML::Tiny;
 use Encode;
 
-$yamltext = Encode::encode('UTF8',do {local $/; open my $fh,'<:encoding(cp932)', "sjis.yml"; <$fh>;});
-$tree = YAML::Tiny->read_string($yamltext);
-print $tree->[0]{'test'}[0]{'str'};
+my $yamltext = Encode::encode('UTF8',do {local $/; open my $fh,'<:encoding(cp932)', "sjis.yml"; <$fh>;});
+my $tree = YAML::Tiny->read_string($yamltext);
+print $tree->[0]{'str'};
