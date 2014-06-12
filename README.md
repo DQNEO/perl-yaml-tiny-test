@@ -2,7 +2,7 @@ yaml
 ====
 
 ##実行方法
-./run.pl
+./test.pl
 
 `$output_enc`を環境に応じて変更する必要があります。
 
